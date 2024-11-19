@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接受悬赏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .bounty {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bounty-title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .bounty-description {
+            margin: 10px 0;
+        }
+
+        .accept-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>悬赏平台</h1>
+    <div id="bounties"></div>
+
+    <script>
+        const bounties = [
+            { title: '修复网站漏洞', description: '需要修复一个网站的安全漏洞。', reward: '500元' },
+            { title: '设计新Logo', description: '为我们的公司设计一个新的Logo。', reward: '300元' },
+            { title: '撰写技术文档', description: '撰写一份详细的技术文档。', reward: '200元' }
+        ];
+
+        const bountiesContainer = document.getElementById('bounties');
+
+        bounties.forEach(bounty => {
+            const bountyDiv = document.createElement('div');
+            bountyDiv.className = 'bounty';
+
+            const title = document.createElement('div');
+            title.className = 'bounty-title';
+            title.textContent = bounty.title;
+
+            const description = document.createElement('div');
+            description.className = 'bounty-description';
+            description.textContent = bounty.description;
+
+            const reward = document.createElement('div');
+            reward.textContent = `奖励: ${bounty.reward}`;
+
+            const acceptButton = document.createElement('button');
+            acceptButton.className = 'accept-button';
+            acceptButton.textContent = '接受悬赏';
+            acceptButton.onclick = () => alert(`你已接受悬赏: ${bounty.title}`);
+
+            bountyDiv.appendChild(title);
+            bountyDiv.appendChild(description);
+            bountyDiv.appendChild(reward);
+            bountyDiv.appendChild(acceptButton);
+
+            bountiesContainer.appendChild(bountyDiv);
+        });
+    </script>
+</body>
+
+</html>
