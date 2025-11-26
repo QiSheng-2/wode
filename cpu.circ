@@ -83,9 +83,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="32"/>
     </tool>
     <tool name="ROM">
-      <a name="addrWidth" val="24"/>
-      <a name="dataWidth" val="5"/>
-      <a name="contents">addr/data: 24 5
+      <a name="addrWidth" val="5"/>
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 5 32
 0
 </a>
     </tool>
@@ -503,7 +503,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="RedWrite"/>
     </comp>
     <comp lib="0" loc="(100,400)" name="Tunnel">
-      <a name="label" val="Reset"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="2" loc="(590,460)" name="Multiplexer">
       <a name="width" val="32"/>
@@ -3808,7 +3808,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(280,200)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="Reset"/>
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(230,170)" name="Constant">
       <a name="facing" val="north"/>
